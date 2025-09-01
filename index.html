@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Matriks - Determinan & Operasi</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Kalkulator Matriks</h1>
+  <div class="tab-menu" role="tablist" aria-label="Menu Kalkulator Matriks">
+    <button id="tab-determinan" aria-selected="true" role="tab" tabindex="0">Kalkulator Determinan Matriks 5x5</button>
+    <button id="tab-operasi" aria-selected="false" role="tab" tabindex="-1">Operasi Matriks</button>
+  </div>
+
+  <!-- Menu 1: Determinan 5x5 -->
+  <section id="menu-determinan" class="menu-containe.r" role="tabpanel" tabindex="0">
+    <h2>Kalkulator Determinan Matriks 5x5</h2>
+    <p>Masukkan elemen-elemen matriks:</p>
+    <table>
+      <tbody id="det5x5-inputs">
+      </tbody>
+    </table>
+    <button class="btn" id="btnComputeDet">Hitung Determinan</button>
+    <button class="btn" id="btnResetDet">Reset</button>
+    <button class="btn" id="btnCopyResult">Salin Hasil</button>
+
+    <div id="matrixDisplay"></div>
+    <div id="result"></div>
+    <div id="steps"></div>
+  </section>
+
+  <!-- Menu 2: Operasi Matriks -->
+  <section id="menu-operasi" class="menu-container hidden" role="tabpanel" tabindex="0">
+    <h2>Operasi Matriks</h2>
+    <p>Pilih ukuran matriks dan masukkan elemen untuk dua matriks, kemudian pilih operasi:</p>
+
+    <div style="max-width: 320px; margin-bottom: 20px;">
+      <label for="matrix-size">Ukuran Matriks: </label>
+      <select id="matrix-size" aria-label="Pilih ukuran matriks">
+        <option value="2">2 x 2</option>
+        <option value="3">3 x 3</option>
+        <option value="4">4 x 4</option>
+        <option value="5" selected>5 x 5</option>
+      </select>
+    </div>
+
+    <div class="matrix-operations">
+      <div class="matrices-row" aria-live="polite">
+        <div class="matrix-block">
+          <h3>Matriks A</h3>
+          <table id="matrixA"></table>
+        </div>
+        <div class="matrix-block">
+          <h3>Matriks B</h3>
+          <table id="matrixB"></table>
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <button class="btn" id="btnAdd">Tambah Matriks (A + B)</button>
+        <button class="btn" id="btnSubtract">Kurangi Matriks (A - B)</button>
+        <button class="btn" id="btnMultiply">Kali Matriks (A × B)</button>
+        <button class="btn" id="btnResetOp">Reset</button>
+      </div>
+
+      <div id="op-result" aria-live="polite" aria-atomic="true"></div>
+    </div>
+  </section>
+
+  <!-- Custom Modal for messages -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <p id="modal-message"></p>
+    </div>
+  </div>
+
+  <!-- Link to external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

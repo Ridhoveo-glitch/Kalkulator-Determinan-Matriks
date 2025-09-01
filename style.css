@@ -1,0 +1,199 @@
+/* Global styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  padding: 20px;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1, h2, h3 {
+  color: #4a90e2;
+  margin-top: 0;
+}
+button, input[type="number"], select {
+  font-family: inherit;
+  font-size: 16px;
+}
+/* Tab menu */
+.tab-menu {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #4a90e2;
+}
+.tab-menu button {
+  background: #d9e8fc;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  color: #4a90e2;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  border-bottom: 3px solid transparent;
+}
+.tab-menu button.active {
+  background: white;
+  color: #357ab8;
+  border-bottom: 3px solid #357ab8;
+  cursor: default;
+}
+/* Shared styles for both menus */
+.menu-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(100, 115, 140, 0.15);
+}
+
+/* Hidden menus */
+.hidden {
+  display: none;
+}
+
+/* Table styling */
+table {
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+td {
+  padding: 5px;
+}
+input[type="number"] {
+  width: 60px;
+  padding: 8px;
+  text-align: center;
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+input[type="number"]:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px #a4d7f0;
+}
+/* Buttons common */
+.btn {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn:hover {
+  background-color: #357ab8;
+}
+/* Active cell highlight */
+.active-cell {
+  background-color: #a4d7f0 !important;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+/* Highlight step style */
+.highlight-step {
+  background-color: #e8f4fa;
+  color: #333;
+  border-left: 4px solid #4a90e2;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+}
+/* Result and steps display */
+#result, #steps, #matrixDisplay {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+  color: #333;
+  min-height: 30px;
+}
+/* Matrix Operations styling */
+.matrix-operations {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.matrices-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.matrix-block {
+  text-align: center;
+}
+.matrix-block table {
+  margin: 0 auto;
+}
+select {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 150px;
+}
+#op-result {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9fafb;
+  border-radius: 10px;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+  min-height: 40px;
+  color: #222;
+  border: 1px solid #ccc;
+}
+
+/* Custom Modal for alerts */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
